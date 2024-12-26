@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Testing spatial out-of-sample area of influence for grain forecasting models</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Hydroclimate2X Lab" href="http://localhost:4000/feed.xml">
+
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/favicon.png"/>
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFWPK8HPVP"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-XFWPK8HPVP');
+	</script>
+
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<div id="header">
+		<nav class="navbar navbar-expand-md navbar-light bg-navbar">
+			<div class="container">
+				
+				<a class="navbar-brand" href="/">
+					<img class="logo navbar-brand d-inline-block align-top ml-0 mr-1" src="/images/logo.svg">
+					Hydroclimate2X Lab
+				</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav nav-pills ml-auto">
+						<!-- 
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/blog/">blog</a>
+						</li> -->
+						
+						<li class="nav-link active">
+						
+						<a class="mx-1" href="/papers/">papers</a>
+						</li>
+						<!-- 
+						<li class="nav-link">
+						 -->
+						<!-- <a class="mx-1" href="/projects/">projects</a></li> -->
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/team/">team</a></li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/join/">join</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container mt-4">
+
+	<div class="row">
+	<div class="col-lg-12">
+		
+		<img class="pull-left pad-right media-object d-none d-sm-block" src="/images/papers/davenport-aoi-grain-forecast.png">
+		<img width=85 class="float-left pad-right d-block d-sm-none" src="/images/papers/davenport-aoi-grain-forecast.png">
+		
+		<div class="titlebox">
+			<div class="title">
+				Testing spatial out-of-sample area of influence for grain forecasting models
+			</div>
+			<p>
+			<div class="smallhead">
+				Davenport F, Lee D, Shukla S, Husak G, Funk C, Budde M, Rowland J.
+				2024.
+				Environmental Research Lettter, 19, 114079
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-lg-3">
+		<div class="bigspacer"></div>
+		<div class="glyphbox note">
+			
+			<div class="smallhead">
+				PDF
+			</div>
+			<div class="pad-left note">
+				<div class="smallspacer"></div>
+				<i class="fa fa-file-text-o fa-fw"></i>
+				<a class="off" href="/pdfs/papers/davenport-aoi-grain-forecast.pdf">davenport-aoi-grain-forecast.pdf</a>
+			</div>
+			<div class="bigspacer"></div>
+			
+			
+			
+			<div class="smallhead">
+				DOI
+			</div>
+			<div class="pad-left note">
+				<div class="smallspacer"></div>
+				<i class="fa fa-external-link fa-fw"></i>
+				<a class="off" href="https://doi.org/10.1088/1748-9326/ad845e">10.1088/1748-9326/ad845e</a>
+			</div>
+			<div class="bigspacer"></div>
+			
+			
+			
+		</div>
+	</div>
+	<div class="col-lg-8">
+		<div class="post">
+			<h1 id="abstract">Abstract</h1>
+
+<p>We examine the factors that determine if a grain forecasting model fit to one region can be transferred to another region. Prior research has proposed examining the area of applicability (AoA) of a model based on structurally similar characteristics in the Earth Observation predictors and weights based on the model derived feature importance. We expand on and evaluate this approach in the context of grain yield forecasting in Sub-Saharan Africa. Specifically, we evaluate an AoA methodology established for generating raster surfaces and apply it to vector supported grain data. We fit a series of ensemble tree models both within single countries and across multiple sets of countries and then test those models in countries excluded from the training set. We then calculate and decompose AoA measures and examine several different performance metrics. We find that the spatial transfer accuracy does not vary across season but does vary by average rainfall and across high, medium, and low yielding regions. In general, areas with higher yields and medium to high average rainfall tend to have higher accuracy for both model training and transfer. Finally, we find that fitting models with multiple countries provides more accurate out-of-sample estimates when compared to models fitted to a single country.</p>
+
+		</div>
+	</div>
+	<div class="col-lg-1"></div>
+</div>
+
+
+	</div>
+
+	<div id="footer"><span style="display:none">foo</span></div>
+
+</body>
+</html>

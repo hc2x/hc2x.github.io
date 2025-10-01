@@ -344,6 +344,10 @@ blockquote {
 	height: 80px;
 }
 
+.footer-text {
+	font-size: 0.85rem;
+}
+
 .footernav {
 	@extend .note;
 	@extend .text-dark-gray;

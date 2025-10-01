@@ -316,6 +316,10 @@ blockquote p {
   height: 80px;
 }
 
+.footer-text {
+  font-size: 0.85rem;
+}
+
 .footernav {
   text-align: center;
   margin-right: 2px;
